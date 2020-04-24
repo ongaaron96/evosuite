@@ -5,6 +5,7 @@ jdk:
   - oraclejdk8
 
 script:
+  - echo "testing"
   - mvn clean
   - mvn --fail-never dependency:resolve -DskipITs  install
   
