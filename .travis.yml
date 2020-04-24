@@ -1,5 +1,10 @@
-language: bash
+language: java
 sudo: false
 
+jdk:
+  - oraclejdk8
+
 script:
-- echo "testing travis"
+  - mvn clean
+  - mvn --fail-never dependency:resolve -DskipITs  install
+  
