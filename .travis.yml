@@ -6,6 +6,3 @@ jdk:
 
 script:
   - echo "testing"
-  - mvn clean
-  - mvn --fail-never dependency:resolve -DskipITs  install
-  
