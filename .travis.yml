@@ -1,5 +1,10 @@
 language: bash
 sudo: false
 
+jdk:
+  - oraclejdk8
+  
+dist: trusty
+
 script:
   - echo "testing"
