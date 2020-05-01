@@ -1,4 +1,10 @@
+
 language: java
+sudo: false
 dist: trusty
-jdk: 
-- openjdk8
+
+jdk:
+  - openjdk8
+
+script:
+   - mvn -DtestSourceDirectory=test/regression/ -Dtest=SmartMutationTest test -DfailIfNoTests=false -pl EvosuiteTest -e

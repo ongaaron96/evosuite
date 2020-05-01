@@ -28,15 +28,14 @@ public class SmartMutationTest {
 
 		String fitnessApproach = "fbranch";
 
-		int timeBudget = 100000;
+		int timeBudget = 100;
 		EvoTestResult result = TestUility.evosuite(targetClass, targetMethod, cp, timeBudget, true, fitnessApproach);
-//		int age = result.getAge();
-//		int time = result.getTime();
-//		double coverage = result.getCoverage();
-//		assert age == 56;
-//		assert time <= 10;
-//		assert coverage == 1.0;
-		System.currentTimeMillis();
+		int age = result.getAge();
+		int time = result.getTime();
+		double coverage = result.getCoverage();
+		assert age <= 70;
+		assert time <= 15;
+		assert coverage == 1.0;
 	}
 
 }
