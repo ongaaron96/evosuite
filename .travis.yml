@@ -7,4 +7,4 @@ jdk:
 dist: trusty
 
 script:
-  - echo "testing"
+  - echo "testing11"
