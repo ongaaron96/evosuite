@@ -5,10 +5,6 @@ dist: trusty
 jdk:
   - openjdk8
   
-before_install:
-  - sudo apt-get maven
-  
 script:
   - echo "testing11"
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mvn -DtestSourceDirectory=test/regression/ -Dtest=SmartMutationTest test -DfailIfNoTests=false -pl EvosuiteTest -e
