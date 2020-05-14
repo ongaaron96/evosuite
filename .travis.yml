@@ -1,11 +1,10 @@
 language: bash
 sudo: false
-
-jdk:
-  - oraclejdk8
-  
 dist: trusty
 
+jdk:
+  - openjdk8
+  
 script:
   - echo "testing11"
   - mvn -DtestSourceDirectory=test/regression/ -Dtest=SmartMutationTest test -DfailIfNoTests=false -pl EvosuiteTest -e
