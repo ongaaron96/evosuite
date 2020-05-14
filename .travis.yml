@@ -8,4 +8,4 @@ dist: trusty
 
 script:
   - echo "testing11"
-  - mvn clean install
+  - mvn -DtestSourceDirectory=test/regression/ -Dtest=SmartMutationTest test -DfailIfNoTests=false -pl EvosuiteTest -e
