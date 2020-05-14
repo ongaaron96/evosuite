@@ -529,7 +529,7 @@
 				<version>2.7</version>
 			</extension>
 		</extensions> -->
-
+		<testSourceDirectory>test</testSourceDirectory>
 		<plugins>
 
 			<plugin>
