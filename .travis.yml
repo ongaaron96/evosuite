@@ -1,3 +1,4 @@
+
 language: java
 sudo: false
 dist: trusty
@@ -6,4 +7,13 @@ jdk:
   - openjdk8
 
 script:
-   - mvn -Dtest=SmartMutationTest test -DfailIfNoTests=false -pl EvosuiteTest -e
+   - mvn -Dtest=BranchEnhancementTest#testColtExample test -pl EvosuiteTest -e
+   - mvn -Dtest=BranchEnhancementTest#testInevitableConstructorExample test -pl EvosuiteTest -e
+   - mvn -Dtest=BranchEnhancementTest#testLayeredCallExample test -pl EvosuiteTest -e
+   - mvn -Dtest=BranchEnhancementTest#testMultipleConstructorsExample test -pl EvosuiteTest -e
+   - mvn -Dtest=BranchEnhancementTest#testMultipleExceptionExample test -pl EvosuiteTest -e
+   - mvn -Dtest=PExampleTest#testPExample test -pl EvosuiteTest -e
+   - mvn -Dtest=SmartMutationTest#testStringArrayExample test -pl EvosuiteTest -e
+   - mvn -Dtest=CascadingCallExampleTest#testCascadingCallExample test -pl EvosuiteTest -e
+   - mvn -Dtest=ArrayGenerationExampleTest#testArrayGenerationExample test -pl EvosuiteTest -e
+   
